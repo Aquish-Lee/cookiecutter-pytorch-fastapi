@@ -15,7 +15,7 @@ apt-get install cookiecutter
 ### Point cookiecutter to this GitHub repository to automatically download and generate your project
 
 ```
-cookiecutter https://github.com/Microsoft/cookiecutter-azure-search-cognitive-skill
+cookiecutter https://github.com/Aquish-Lee/cookiecutter-pytorch-fastapi
 ```
 
 View the README.md of your new project for instructions on next steps
