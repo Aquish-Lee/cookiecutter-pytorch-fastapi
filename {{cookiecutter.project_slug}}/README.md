@@ -66,11 +66,14 @@
 - 项目三方包依赖修改：
 {{cookiecutter.project_name}}/requirements/base.txt
 
-- Nginx 配置修改(代理端口、worker数)：{{cookiecutter.project_name}}/requirements/default|nginx.conf
+- Nginx 配置修改(代理端口、worker数)：
+{{cookiecutter.project_name}}/requirements/default|nginx.conf
 
-- celery worker数修改：{{cookiecutter.project_slug}}/app/msg_queue/celery_config.py
+- celery worker数修改：
+{{cookiecutter.project_slug}}/app/msg_queue/celery_config.py
 
-- gunicorn worker数修改：{{cookiecutter.project_slug}}/app/utils/assets/config/gunicorn_config.py
+- gunicorn worker数修改：
+{{cookiecutter.project_slug}}/app/utils/assets/config/gunicorn_config.py
 ```
 
 
@@ -91,7 +94,7 @@ docker exec -it container_name bash
 /etc/init.d/supervisor start
 ```
 
-服务正常开启后可访问 http://localhost:port/docs查看FastAPI的UI界面
+服务正常开启后可访问 http://localhost:port/docs 查看FastAPI的UI界面
 
 [![hwDwz4.md.png](https://z3.ax1x.com/2021/09/01/hwDwz4.md.png)](https://imgtu.com/i/hwDwz4)
 
