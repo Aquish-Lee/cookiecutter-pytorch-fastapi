@@ -1,2 +1,3 @@
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License.
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT

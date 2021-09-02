@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 """
 fastapi、nginx内部连通性测试
 """

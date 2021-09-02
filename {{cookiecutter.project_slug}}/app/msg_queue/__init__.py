@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 from celery import Celery
 from msg_queue.celery_config import broker_url, backend_url
 

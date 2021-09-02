@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 bind = ":5000"
 pidfile = 'logs/gunicorn.pid'
 workers = 3 # 推荐核数*2+1发挥最佳性能

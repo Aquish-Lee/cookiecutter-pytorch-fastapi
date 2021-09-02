@@ -1,4 +1,6 @@
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 """
 多进程请求测试服务可用性
 """

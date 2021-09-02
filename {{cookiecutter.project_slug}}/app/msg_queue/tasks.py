@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 import os
 import sys
 sys.path.insert(0, os.getcwd())
+
 import cv2
 import json
 import base64

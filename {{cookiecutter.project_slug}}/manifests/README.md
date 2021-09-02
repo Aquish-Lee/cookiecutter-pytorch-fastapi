@@ -1,1 +1,1 @@
-add your Kubernetes config file here
+add your Kubernetes yml file here

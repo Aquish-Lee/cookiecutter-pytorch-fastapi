@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 broker_url = "redis://localhost:6379/0"
 backend_url = "redis://localhost:6379/1"
 

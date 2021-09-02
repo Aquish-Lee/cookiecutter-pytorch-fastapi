@@ -9,7 +9,14 @@ Python cookiecutter API for quick deployments of Pytorch models with FastAPI
 
 ### Install the latest [Cookiecutter](https://github.com/audreyr/cookiecutter) if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
 ```
-apt-get install cookiecutter
+# Install On Ubuntu
+    apt-get install cookiecutter
+# Install On Centos with snapd (Not recommended)
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    yum install snapd
+    systemctl enable --now snapd.socket
+    ln -s /var/lib/snapd/snap /snap
+    snap install cookiecutter --edge
 ```
 
 ### Point cookiecutter to this GitHub repository to automatically download and generate your project

@@ -31,6 +31,7 @@ COPY requirements/nginx.conf /etc/nginx/nginx.conf
 # Supervisor config
 COPY requirements/supervisord.conf /etc/supervisor/supervisord.conf
 
+# CN support
 ENV LANG C.UTF-8
 
 EXPOSE 8000

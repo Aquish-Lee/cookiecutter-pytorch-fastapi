@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Author  : Aquish
+# @Organization : NTT
 from msg_queue.tasks import inference
 
 
