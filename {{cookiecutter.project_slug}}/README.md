@@ -49,7 +49,7 @@
 - app/service/predict.py:
     infer_obj():
   		__init__(): 定义模型需要的变量并执行_init_model()_
-  		init_model(): 加载变量完成网络模型搭建、权重加载
+  		_init_model(): 加载变量完成网络模型搭建、权重加载
   		predict(): 定义网络接收图片后预处理、推理、后处理的pipeline
 
 - utils/assets/checkpoints 存放模型权重文件
@@ -64,10 +64,10 @@
 
 ```python
 - 项目三方包依赖修改：
-{{cookiecutter.project_name}}/requirements/base.txt
+{{cookiecutter.project_slug}}/requirements/base.txt
 
 - Nginx 配置修改(代理端口、worker数)：
-{{cookiecutter.project_name}}/requirements/default|nginx.conf
+{{cookiecutter.project_slug}}/requirements/default|nginx.conf
 
 - celery worker数修改：
 {{cookiecutter.project_slug}}/app/msg_queue/celery_config.py
@@ -87,7 +87,7 @@
 # 构建镜像并推送至仓库（需修改仓库地址）
 sh release.sh
 # 构建完毕后运行容器
-docker run -itd --name container_name -p port:8000 {{cookiecutter.project_name}}:latest bash
+docker run -itd --name container_name -p port:8000 {{cookiecutter.project_slug}}:latest bash
 # 链接到容器内
 docker exec -it container_name bash
 # 开启服务
