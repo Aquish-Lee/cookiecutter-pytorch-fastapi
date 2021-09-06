@@ -22,14 +22,14 @@ def get_filepaths(path):
 
 
 #推理请求
-def main_request(imgP):
+def main_request(img_path):
     url = "http://0.0.0.0:8000/inference"  # nginx url
     with open(imgP,'rb') as f:
-        imgString = base64.b64encode(f.read())
+        img_string = base64.b64encode(f.read())
 
     # 传输的数据格式
     data = {
-        'img_string': imgString.decode(),
+        'img_string': img_string.decode(),
     }
 
     response = requests.post(url, json.dumps(data)) #本地测试
@@ -38,17 +38,17 @@ def main_request(imgP):
 
 
 #循环——推理
-def start_det(strN, imgpath):
+def start_det(work_num, imgpath):
     epoch = 0
     img_type = ['png', 'jpg', 'jpeg', 'bmp', 'JPEG']
 
     while True:
         filelists = get_filepaths(imgpath)
-        for imgP, imgN in filelists:
-            if imgN.split('.')[-1] in img_type:
+        for img_path, img_name in filelists:
+            if img_name.split('.')[-1] in img_type:
                 start_time = time.time()
-                response = main_request(imgP)
-                print('epoch:%d--worknum:%s--time:%f--response:%s' % (epoch, strN, time.time()-start_time, response.json()))
+                response = main_request(img_path)
+                print('epoch:%d--worknum:%s--time:%f--response:%s' % (epoch, work_num, time.time()-start_time, response.json()))
 
         epoch += 1
 

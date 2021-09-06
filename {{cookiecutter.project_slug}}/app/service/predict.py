@@ -53,10 +53,14 @@ class infer_obj:
         实现网络接收ndarray并输出结果的推理pipeline
         根据业务内容相应做异常处理及日志记录
         """
-        pass
+        res = do_somethin()
+
+        return json.dumps(res)
 
 
 if __name__ == "__main__":
     infer = infer_obj()
-    res = infer.predict(cv2.imread("tests/images/1.jpg"))
-    print(res)
+
+    img_path = ""
+    res = infer.predict(cv2.imread(img_path))
+    logger.info(f"识别结果: {json.loads(res)}")

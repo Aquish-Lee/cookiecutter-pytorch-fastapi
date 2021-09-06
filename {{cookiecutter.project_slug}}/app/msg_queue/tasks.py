@@ -58,18 +58,17 @@ def inference(self, data):
     data : imgstring
     """
 
+    result = None
     # imgstring -> ndarray
     data = json.loads(data)
     try:
         img = base64_to_ndarray(data["img_string"].encode())
-    except Exception as e:
+    except Exception:
         logger.info("base64 to ndarray error")
-        result = None
-    else:
-        try:
-            result = self.model.predict(img)
-        except Exception as e2:
-            logger.info("predict error")
-            result = None
-    finally:
-        return json.dumps(result)
+
+    try:
+        result = self.model.predict(img)
+    except Exception:
+        logger.info("predict error")
+
+    return result

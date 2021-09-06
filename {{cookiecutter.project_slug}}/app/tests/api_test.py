@@ -24,13 +24,12 @@ def get_filepaths(path):
 class api_test:
     def __init__(self):
         self.url = "http://0.0.0.0:5000/inference"  # fastapi url
-#         self.url = "http://0.0.0.0:8000/inference"  # nginx url
 
     @staticmethod
     def read_img_base64(p):
         with open(p,'rb') as f:
-            imgString = base64.b64encode(f.read())
-        return imgString.decode()
+            img_string = base64.b64encode(f.read())
+        return img_string.decode()
 
     def send_post(self, img_path):
         imgstring = self.read_img_base64(img_path)
@@ -43,7 +42,7 @@ class api_test:
         session = requests.session()
         response = session.post(self.url, json.dumps(data))  # Json格式请求
 
-#         logger.info("time:".format(time.time()-start_time, '.3f')+"s")
+        logger.info("time: {}".format(time.time()-start_time, '.2f')+"s")
         logger.info(response.status_code)
         logger.info(response.text)
 
@@ -56,13 +55,14 @@ if __name__ == "__main__":
     api = api_test()
     
     # 文件夹测试
-#     imgpath = 'tests/images'
+#     img_dir_path = 'tests/images'
 #     img_type = ['png', 'jpg', 'jpeg', 'bmp', 'JPEG']
-#     filelists = get_filepaths(imgpath)
+#     filelists = get_filepaths(img_dir_path)
 #     for imgP, imgN in filelists:
 #         print(imgP)
 #         if imgN.split('.')[-1] in img_type:
 #             api.send_post(imgP)
 
     # 单张图片测试
-    api.send_post("tests/images/1.jpg")
+    img_path = "tests/images/1.jpg"
+    api.send_post(img_path)

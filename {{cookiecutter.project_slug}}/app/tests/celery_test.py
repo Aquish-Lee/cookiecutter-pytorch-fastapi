@@ -12,8 +12,8 @@ from controller.model_controller import controller_inference
 
 def read_img_base64(p):
     with open(p,'rb') as f:
-        imgString = base64.b64encode(f.read())
-    return imgString.decode()
+        img_string = base64.b64encode(f.read())
+    return img_string.decode()
 
 
 if __name__ == "__main__":
@@ -27,4 +27,4 @@ if __name__ == "__main__":
 
     res = controller_inference(json.dumps(data))
     logger.info(f"celery task id: {res.id}")
-    logger.info(f"inference result: {res.get()}")
+    logger.info(f"inference result: {json.loads(res.get())}")

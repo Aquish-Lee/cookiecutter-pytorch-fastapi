@@ -1,4 +1,5 @@
 # torch GPU env with nginx and supervisor
+# FROM ubuntu:18.04
 FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 
 LABEL maintainer "Aquish"

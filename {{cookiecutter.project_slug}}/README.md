@@ -28,9 +28,7 @@
 该项目主要实现了以下功能：
 
 - 基于Celery部署深度学习，实现分布式任务调度
-
 - 基于FastAPI提供WEB Server服务
-
 - 基于Gunicorn+Nginx实现WEB部署
 - Supervisor实现项目组件管控
 - 支持Docker部署

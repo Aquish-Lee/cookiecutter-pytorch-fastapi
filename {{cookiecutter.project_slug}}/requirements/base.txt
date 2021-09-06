@@ -1,4 +1,7 @@
+addict
+shapely
 logzero
+pyclipper
 opencv-python-headless
 numpy==1.19.2
 redis
