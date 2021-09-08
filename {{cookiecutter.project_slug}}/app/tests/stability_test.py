@@ -24,7 +24,7 @@ def get_filepaths(path):
 #推理请求
 def main_request(img_path):
     url = "http://0.0.0.0:8000/inference"  # nginx url
-    with open(imgP,'rb') as f:
+    with open(img_path,'rb') as f:
         img_string = base64.b64encode(f.read())
 
     # 传输的数据格式
